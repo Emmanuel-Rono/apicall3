@@ -1,0 +1,4 @@
+package NetworkLayer
+
+class viewModel {
+}
