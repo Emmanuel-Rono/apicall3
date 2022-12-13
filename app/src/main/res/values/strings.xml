@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">apicall3</string>
+    <string name="like">Like</string>
+    <string name="your_name">Your name ?</string>
 </resources>

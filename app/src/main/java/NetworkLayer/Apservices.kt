@@ -7,7 +7,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-//Acces Moshi will be used to convert json files
+//Acces Moshi will be used to convert json
+//When we make a request we get data in a json format
+//Moshi converts () into known types
 private val moshi=Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .build()
@@ -20,10 +22,10 @@ private val retrofit = Retrofit.Builder()
 interface GetDataFromCloud
 {
     @GET("/photos")
-    private fun getPhotos():List<PhotoResponse>
+  suspend fun getPhotos():List<PhotoResponse>
 
 }
-
+//
 object MarsApi
 {
     val retrofitservice:GetDataFromCloud by lazy {
